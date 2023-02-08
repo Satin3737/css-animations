@@ -1,5 +1,4 @@
 @import 'base/reboot';
-@import 'partials/time-function';
 
 * {
     font-family: monospace;
@@ -7,6 +6,11 @@
 
 body {
     padding: 40px 20px;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: monospace;
+    color: darkcyan;
+    font-weight: 400;
 }
 
 .title {
@@ -36,3 +40,6 @@ body {
         transform: translateY(-2px);
     }
 }
+
+@import 'partials/time-function';
+@import 'partials/buttons';
