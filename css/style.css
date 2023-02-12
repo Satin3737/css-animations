@@ -486,12 +486,12 @@ body {
   overflow: hidden;
 }
 
-.buttons #rotate {
+#rotate {
   border: 2px solid darkcyan;
-  transition: color 1.4s;
+  transition: color 0.8s;
 }
 
-.buttons #rotate:before {
+#rotate:before {
   content: "";
   position: absolute;
   left: 0;
@@ -502,23 +502,23 @@ body {
   z-index: -1;
   transform-origin: bottom left;
   transform: rotate(-90deg);
-  transition: transform 1s;
+  transition: all 0.5s;
 }
 
-.buttons #rotate:hover {
+#rotate:hover {
   color: #fff;
 }
 
-.buttons #rotate:hover:before {
+#rotate:hover:before {
   transform: rotate(0deg);
 }
 
-.buttons #swipe {
+#swipe {
   border: 2px solid darkcyan;
-  transition: color 1s;
+  transition: color 0.5s;
 }
 
-.buttons #swipe:before {
+#swipe:before {
   content: "";
   position: absolute;
   left: 0;
@@ -528,23 +528,23 @@ body {
   background: darkcyan;
   z-index: -1;
   transform: translateY(-100%);
-  transition: transform 1s;
+  transition: all 0.5s;
 }
 
-.buttons #swipe:hover {
+#swipe:hover {
   color: #fff;
 }
 
-.buttons #swipe:hover:before {
+#swipe:hover:before {
   transform: translateY(0);
 }
 
-.buttons #cross {
+#cross {
   border: 2px solid darkcyan;
-  transition: color 1s;
+  transition: color 0.5s;
 }
 
-.buttons #cross:before {
+#cross:before {
   content: "";
   position: absolute;
   left: 0;
@@ -553,11 +553,11 @@ body {
   height: 100%;
   background: darkcyan;
   z-index: -1;
-  transition: transform 1s;
+  transition: all 0.5s;
   transform: rotateX(90deg);
 }
 
-.buttons #cross:after {
+#cross:after {
   content: "";
   position: absolute;
   left: 0;
@@ -566,41 +566,69 @@ body {
   height: 100%;
   background: darkcyan;
   z-index: -1;
-  transition: transform 1s;
+  transition: all 0.5s;
   transform: rotateY(90deg);
 }
 
-.buttons #cross:hover {
+#cross:hover {
   color: #fff;
 }
 
-.buttons #cross:hover:before {
+#cross:hover:before {
   transform: rotateX(0deg);
 }
 
-.buttons #cross:hover:after {
+#cross:hover:after {
   transform: rotateY(0deg);
 }
 
-.buttons #stretching {
+#stretching {
   letter-spacing: 0;
   font-weight: 400;
   outline: 2px solid darkcyan;
   transition: all 0.5s;
 }
 
-.buttons #stretching:hover {
+#stretching:hover {
   letter-spacing: 2px;
   font-weight: 900;
   outline: 4px solid darkcyan;
 }
 
-.buttons #text {
+#text {
+  border: 2px solid darkcyan;
+  transition: color 0.5s;
+}
+
+#text:before {
+  content: "cool";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: darkcyan;
+  transform: translateY(-100%);
+  transition: all 0.5s;
+}
+
+#text:hover {
+  color: #fff;
+}
+
+#text:hover:before {
+  transform: translateY(0);
+}
+
+#text {
   border: 2px solid darkcyan;
   transition: color 1s;
 }
 
-.buttons #text:before {
+#text:before {
   content: "cool";
   display: flex;
   align-items: center;
@@ -615,22 +643,22 @@ body {
   transition: transform 1s;
 }
 
-.buttons #text:hover {
+#text:hover {
   color: #fff;
 }
 
-.buttons #text:hover:before {
+#text:hover:before {
   transform: translateY(0);
 }
 
-.buttons #glowing {
+#glowing {
   color: darkcyan;
   border: 2px solid darkcyan;
   background: white;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
-.buttons #glowing:before {
+#glowing:before {
   content: "";
   position: absolute;
   left: 0;
@@ -639,27 +667,27 @@ body {
   height: 24px;
   background: white;
   transform: translateX(-100%) rotate(45deg);
-  transition: transform 1s;
+  transition: all 0.5s;
 }
 
-.buttons #glowing:hover {
+#glowing:hover {
   color: white;
   background: darkcyan;
 }
 
-.buttons #glowing:hover:before {
+#glowing:hover:before {
   transform: translateX(100%) rotate(45deg);
 }
 
-.buttons #layers {
+#layers {
   background: darkcyan;
-  transition: all 1s;
+  transition: all 0.5s;
   color: transparent;
   border: 2px solid darkcyan;
 }
 
-.buttons #layers:before,
-.buttons #layers:after {
+#layers:before,
+#layers:after {
   content: "layers effect";
   display: flex;
   align-items: center;
@@ -671,28 +699,28 @@ body {
   width: 100%;
   height: 100%;
   background: white;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
-.buttons #layers:after {
+#layers:after {
   transform: translate(-100%, 100%);
 }
 
-.buttons #layers:hover:before {
+#layers:hover:before {
   transform: translate(100%, -100%);
 }
 
-.buttons #layers:hover:after {
+#layers:hover:after {
   transform: translate(0, 0);
 }
 
-.buttons #scaling {
-  transition: all 1s;
+#scaling {
+  transition: all 0.5s;
   color: darkcyan;
   border: 2px solid darkcyan;
 }
 
-.buttons #scaling:before {
+#scaling:before {
   content: "scaling effect";
   display: flex;
   align-items: center;
@@ -704,23 +732,23 @@ body {
   width: 100%;
   height: 100%;
   background: darkcyan;
-  transition: all 1s;
+  transition: all 0.5s;
   transform: scale(5);
   opacity: 0;
 }
 
-.buttons #scaling:hover:before {
+#scaling:hover:before {
   opacity: 1;
   transform: scale(1);
 }
 
-.buttons #circle {
-  transition: all 1s;
+#circle {
+  transition: all 0.5s;
   color: darkcyan;
   border: 2px solid darkcyan;
 }
 
-.buttons #circle:before {
+#circle:before {
   content: "";
   display: flex;
   align-items: center;
@@ -732,65 +760,26 @@ body {
   width: 100%;
   height: 0;
   background: darkcyan;
-  transition: all 1s;
+  transition: all 0.5s;
   border-radius: 100% 100% 0 0;
   z-index: -1;
 }
 
-.buttons #circle:hover {
+#circle:hover {
   color: white;
 }
 
-.buttons #circle:hover:before {
+#circle:hover:before {
   height: 200%;
 }
 
-.buttons #traffic {
-  color: white;
-  background: darkcyan;
-  overflow: visible;
-}
-
-.buttons #traffic:before,
-.buttons #traffic:after {
-  content: "traffic effect";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.buttons #traffic:before {
-  background: coral;
-  transform-origin: top;
-  transform: rotateX(270deg);
-  transition: all 0.5s;
-}
-
-.buttons #traffic:after {
-  background: tomato;
-  transform-origin: bottom;
-  transform: rotateX(-270deg);
-  transition: all 0.5s 0.5s;
-}
-
-.buttons #traffic:hover:before,
-.buttons #traffic:hover:after {
-  transform: rotateX(0deg);
-}
-
-.buttons #swapping {
+#swapping {
   border: 2px solid darkcyan;
   color: transparent;
 }
 
-.buttons #swapping:before,
-.buttons #swapping:after {
+#swapping:before,
+#swapping:after {
   content: "swapping effect";
   color: white;
   display: flex;
@@ -801,39 +790,40 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
-.buttons #swapping:before {
+#swapping:before {
   left: 0;
   opacity: 1;
   transform: scale(1) rotateY(0deg);
 }
 
-.buttons #swapping:after {
+#swapping:after {
   left: -100%;
   opacity: 0;
   transform: scale(0) rotateY(0deg);
 }
 
-.buttons #swapping:hover:before {
+#swapping:hover:before {
   left: 100%;
   transform: scale(0) rotateY(360deg);
   opacity: 0;
 }
 
-.buttons #swapping:hover:after {
+#swapping:hover:after {
   left: 0;
   opacity: 1;
   transform: scale(1) rotateY(360deg);
 }
 
-.buttons #circles3 {
+#circles3 {
   color: darkcyan;
-  transition: all 1s;
+  border: 2px solid darkcyan;
+  transition: all 0.5s;
 }
 
-.buttons #circles3 span {
+#circles3 span {
   display: block;
   position: absolute;
   top: 0;
@@ -847,8 +837,8 @@ body {
   z-index: -1;
 }
 
-.buttons #circles3:before,
-.buttons #circles3:after {
+#circles3:before,
+#circles3:after {
   content: "";
   background: darkcyan;
   position: absolute;
@@ -862,49 +852,49 @@ body {
   z-index: -1;
 }
 
-.buttons #circles3:before {
+#circles3:before {
   left: 0;
   box-shadow: -100px 0 0 darkcyan;
 }
 
-.buttons #circles3:after {
+#circles3:after {
   right: 0;
   box-shadow: 100px 0 0 darkcyan;
 }
 
-.buttons #circles3:hover {
+#circles3:hover {
   color: white;
   transition-delay: 0.4s;
 }
 
-.buttons #circles3:hover span {
+#circles3:hover span {
   transform: scale(1);
   transition-delay: 0.4s;
-  border-radius: 8px;
+  border-radius: 0;
 }
 
-.buttons #circles3:hover:before {
+#circles3:hover:before {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   box-shadow: 30px 0 0 darkcyan;
   opacity: 1;
 }
 
-.buttons #circles3:hover:after {
+#circles3:hover:after {
   right: 50%;
   transform: translateX(50%) translateY(-50%);
   box-shadow: -30px 0 0 darkcyan;
   opacity: 1;
 }
 
-.buttons #red-blue {
+#red-blue {
   color: white;
   background: transparent;
   transition: all 1s;
 }
 
-.buttons #red-blue:before,
-.buttons #red-blue:after {
+#red-blue:before,
+#red-blue:after {
   content: "";
   background: darkcyan;
   position: absolute;
@@ -915,34 +905,259 @@ body {
   transition: all 0.5s;
 }
 
-.buttons #red-blue:before {
+#red-blue:before {
   top: -3px;
   left: -3px;
   background: #20caff;
   transform-origin: top;
 }
 
-.buttons #red-blue:after {
+#red-blue:after {
   top: 3px;
   left: 3px;
   background: #ff7675;
   transform-origin: bottom;
 }
 
-.buttons #red-blue:hover {
+#red-blue:hover {
   color: darkcyan;
 }
 
-.buttons #red-blue:hover:before {
+#red-blue:hover:before {
   top: -6px;
   left: 0;
   transform: perspective(1000px) rotateX(75deg);
 }
 
-.buttons #red-blue:hover:after {
+#red-blue:hover:after {
   top: 6px;
   left: 0;
   transform: perspective(1000px) rotateX(-75deg);
+}
+
+#split {
+  border: 2px solid darkcyan;
+  transition: all 0.5s;
+}
+
+#split:before,
+#split:after,
+#split span:before,
+#split span:after {
+  content: "";
+  position: absolute;
+  background: darkcyan;
+  width: 25%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+#split:before {
+  top: 0;
+  left: -25%;
+}
+
+#split:after {
+  top: -100%;
+  left: 25%;
+}
+
+#split span:before {
+  top: 100%;
+  right: 25%;
+}
+
+#split span:after {
+  top: 0;
+  right: -25%;
+}
+
+#split:hover {
+  color: white;
+}
+
+#split:hover:before {
+  top: 0;
+  left: 0;
+}
+
+#split:hover:after {
+  top: 0;
+}
+
+#split:hover span:before {
+  top: 0;
+}
+
+#split:hover span:after {
+  right: 0;
+}
+
+#split2 {
+  border: 2px solid darkcyan;
+  transition: all 0.5s;
+}
+
+#split2:before,
+#split2:after,
+#split2 span:before,
+#split2 span:after {
+  content: "";
+  position: absolute;
+  background: darkcyan;
+  width: 25%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+#split2:before {
+  top: 100%;
+  left: 0;
+}
+
+#split2:after {
+  top: -100%;
+  left: 25%;
+}
+
+#split2 span:before {
+  top: 100%;
+  right: 25%;
+}
+
+#split2 span:after {
+  top: -100%;
+  right: 0;
+}
+
+#split2:hover {
+  color: white;
+}
+
+#split2:hover:before {
+  top: 0;
+}
+
+#split2:hover:after {
+  top: 0;
+}
+
+#split2:hover span:before {
+  top: 0;
+}
+
+#split2:hover span:after {
+  top: 0;
+}
+
+#split3 {
+  border: 2px solid darkcyan;
+  transition: all 0.5s;
+}
+
+#split3:before,
+#split3:after,
+#split3 span:before,
+#split3 span:after {
+  content: "";
+  position: absolute;
+  background: darkcyan;
+  width: 25%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.2s;
+}
+
+#split3:before {
+  top: 100%;
+  left: 0;
+}
+
+#split3:after {
+  top: -100%;
+  left: 25%;
+  transition-delay: 0.1s;
+}
+
+#split3 span:before {
+  top: 100%;
+  right: 25%;
+  transition-delay: 0.2s;
+}
+
+#split3 span:after {
+  top: -100%;
+  right: 0;
+  transition-delay: 0.3s;
+}
+
+#split3:hover {
+  color: white;
+}
+
+#split3:hover:before {
+  top: 0;
+}
+
+#split3:hover:after {
+  top: 0;
+}
+
+#split3:hover span:before {
+  top: 0;
+}
+
+#split3:hover span:after {
+  top: 0;
+}
+
+#swap-border {
+  overflow: visible;
+}
+
+#swap-border:before,
+#swap-border:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+#swap-border:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 30px);
+  top: -15px;
+  left: 0;
+  border-left: 2px solid cornflowerblue;
+  border-right: 2px solid tomato;
+  transition: all 1s;
+}
+
+#swap-border:after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 30px);
+  height: 100%;
+  top: 0;
+  left: -15px;
+  border-top: 2px solid cornflowerblue;
+  border-bottom: 2px solid tomato;
+  transition: all 1s;
+  transition-delay: 0.2s;
+}
+
+#swap-border:hover:before {
+  transform: rotateY(180deg);
+}
+
+#swap-border:hover:after {
+  transform: rotateX(-180deg);
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -1,0 +1,31 @@
+#layers {
+    background: darkcyan;
+    transition: all 0.5s;
+    color: transparent;
+    border: 2px solid darkcyan;
+    &:before, &:after {
+        content: 'layers effect';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: darkcyan;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        transition: all 0.5s;
+    }
+    &:after {
+        transform: translate(-100%, 100%);
+    }
+    &:hover {
+        &:before {
+            transform: translate(100%, -100%);
+        }
+        &:after {
+            transform: translate(0, 0);
+        }
+    }
+}

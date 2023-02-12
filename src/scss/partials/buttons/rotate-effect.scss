@@ -1,0 +1,23 @@
+#rotate {
+    border: 2px solid darkcyan;
+    transition: color 0.8s;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 150%;
+        height: 100%;
+        background: darkcyan;
+        z-index: -1;
+        transform-origin: bottom left;
+        transform: rotate(-90deg);
+        transition: all 0.5s;
+    }
+    &:hover {
+        color: #fff;
+        &:before {
+            transform: rotate(0deg);
+        }
+    }
+}

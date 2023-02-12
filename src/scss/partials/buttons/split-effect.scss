@@ -1,0 +1,147 @@
+#split {
+    border: 2px solid darkcyan;
+    transition: all 0.5s;
+    &:before,
+    &:after,
+    span:before,
+    span:after{
+        content: '';
+        position: absolute;
+        background: darkcyan;
+        width: 25%;
+        height: 100%;
+        z-index: -1;
+        transition: all 0.5s;
+    }
+    &:before {
+        top: 0;
+        left: -25%;
+    }
+    &:after {
+        top: -100%;
+        left: 25%;
+    }
+    span:before {
+        top: 100%;
+        right: 25%;
+    }
+    span:after {
+        top: 0;
+        right: -25%;
+    }
+    &:hover {
+        color: white;
+        &:before {
+            top: 0;
+            left: 0;
+        }
+        &:after {
+            top: 0;
+        }
+        span:before {
+            top: 0;
+        }
+        span:after {
+            right: 0;
+        }
+    }
+}
+
+#split2 {
+    border: 2px solid darkcyan;
+    transition: all 0.5s;
+    &:before,
+    &:after,
+    span:before,
+    span:after{
+        content: '';
+        position: absolute;
+        background: darkcyan;
+        width: 25%;
+        height: 100%;
+        z-index: -1;
+        transition: all 0.5s;
+    }
+    &:before {
+        top: 100%;
+        left: 0;
+    }
+    &:after {
+        top: -100%;
+        left: 25%;
+    }
+    span:before {
+        top: 100%;
+        right: 25%;
+    }
+    span:after {
+        top: -100%;
+        right: 0;
+    }
+    &:hover {
+        color: white;
+        &:before {
+            top: 0;
+        }
+        &:after {
+            top: 0;
+        }
+        span:before {
+            top: 0;
+        }
+        span:after {
+            top: 0;
+        }
+    }
+}
+
+#split3 {
+    border: 2px solid darkcyan;
+    transition: all 0.5s;
+    &:before,
+    &:after,
+    span:before,
+    span:after{
+        content: '';
+        position: absolute;
+        background: darkcyan;
+        width: 25%;
+        height: 100%;
+        z-index: -1;
+        transition: all 0.2s;
+    }
+    &:before {
+        top: 100%;
+        left: 0;
+    }
+    &:after {
+        top: -100%;
+        left: 25%;
+        transition-delay: 0.1s;
+    }
+    span:before {
+        top: 100%;
+        right: 25%;
+        transition-delay: 0.2s;
+    }
+    span:after {
+        top: -100%;
+        right: 0;
+        transition-delay: 0.3s;
+    }
+    &:hover {
+        color: white;
+        &:before {
+            top: 0;
+        }
+        &:after {
+            top: 0;
+        }
+        span:before {
+            top: 0;
+        }
+        span:after {
+            top: 0;
+        }
+    }
+}

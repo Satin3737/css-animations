@@ -1,0 +1,22 @@
+#swipe {
+    border: 2px solid darkcyan;
+    transition: color 0.5s;
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: darkcyan;
+        z-index: -1;
+        transform: translateY(-100%);
+        transition: all 0.5s;
+    }
+    &:hover {
+        color: #fff;
+        &:before {
+            transform: translateY(0);
+        }
+    }
+}

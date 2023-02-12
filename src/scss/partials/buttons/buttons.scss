@@ -1,0 +1,36 @@
+.buttons {
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 40px;
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 30px;
+        text-align: center;
+        background: none;
+        border: none;
+        position: relative;
+        color: inherit;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+}
+
+@import "rotate-effect";
+@import "swipe-effect";
+@import "cross-effect";
+@import "stretching-effect";
+@import "text-effect";
+@import "glowing-effect";
+@import "layers-effect";
+@import "scaling-effect";
+@import "circle-effect";
+@import "swapping-effect";
+@import "circles-3-effect";
+@import "red-blue-effect";
+@import "split-effect";
+@import "swap-border-effect";
