@@ -288,4 +288,145 @@
             }
         }
     }
+
+    #swapping {
+        border: 2px solid darkcyan;
+        color: transparent;
+        &:before, &:after {
+            content: 'swapping effect';
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: darkcyan;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 1s;
+        }
+        &:before {
+            left: 0;
+            opacity: 1;
+            transform: scale(1) rotateY(0deg);
+        }
+        &:after {
+            left: -100%;
+            opacity: 0;
+            transform: scale(0) rotateY(0deg);
+        }
+        &:hover {
+            &:before {
+                left: 100%;
+                transform: scale(0) rotateY(360deg);
+                opacity: 0;
+            }
+            &:after {
+                left: 0;
+                opacity: 1;
+                transform: scale(1) rotateY(360deg);
+            }
+        }
+    }
+
+    #circles3 {
+        color: darkcyan;
+        transition: all 1s;
+        span {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: darkcyan;
+            transform: scale(0);
+            border-radius: 100%;
+            transition: all 0.3s;
+            z-index: -1;
+        }
+        &:before, &:after {
+            content: '';
+            background: darkcyan;
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            transform: translateY(-50%);
+            transition: all 0.3s;
+            opacity: 0;
+            z-index: -1;
+        }
+        &:before {
+            left: 0;
+            box-shadow: -100px 0 0 darkcyan;
+        }
+        &:after {
+            right: 0;
+            box-shadow: 100px 0 0 darkcyan;
+        }
+        &:hover {
+            color: white;
+            transition-delay: 0.4s;
+            span {
+                transform: scale(1);
+                transition-delay: 0.4s;
+                border-radius: 8px;
+            }
+            &:before {
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                box-shadow: 30px 0 0 darkcyan;
+                opacity: 1;
+            }
+            &:after {
+                right: 50%;
+                transform: translateX(50%) translateY(-50%);
+                box-shadow: -30px 0 0 darkcyan;
+                opacity: 1;
+            }
+        }
+    }
+
+    #red-blue {
+        color: white;
+        background: transparent;
+        transition: all 1s;
+        &:before, &:after {
+            content: '';
+            background: darkcyan;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            mix-blend-mode: multiply;
+            transition: all 0.5s;
+        }
+        &:before {
+            top: -3px;
+            left: -3px;
+            background: #20caff;
+            transform-origin: top;
+        }
+        &:after {
+            top: 3px;
+            left: 3px;
+            background: #ff7675;
+            transform-origin: bottom;
+        }
+        &:hover {
+            color: darkcyan;
+            &:before {
+                top: -6px;
+                left: 0;
+                transform: perspective(1000px) rotateX(75deg);
+            }
+            &:after {
+                top: 6px;
+                left: 0;
+                transform: perspective(1000px) rotateX(-75deg);
+            }
+        }
+    }
 }
