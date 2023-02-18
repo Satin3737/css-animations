@@ -625,7 +625,7 @@ body {
 
 #text {
   border: 2px solid darkcyan;
-  transition: color 1s;
+  transition: color 0.5s;
 }
 
 #text:before {
@@ -640,7 +640,7 @@ body {
   height: 100%;
   background: darkcyan;
   transform: translateY(-100%);
-  transition: transform 1s;
+  transition: transform 0.5s;
 }
 
 #text:hover {
@@ -1158,6 +1158,431 @@ body {
 
 #swap-border:hover:after {
   transform: rotateX(-180deg);
+}
+
+#grow-border {
+  background: darkcyan;
+  color: white;
+  overflow: visible;
+}
+
+#grow-border:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: -5px;
+  left: -5px;
+  border-left: 2px solid darkcyan;
+  border-top: 2px solid darkcyan;
+  transition: all 0.5s;
+}
+
+#grow-border:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  bottom: -5px;
+  right: -5px;
+  border-right: 2px solid darkcyan;
+  border-bottom: 2px solid darkcyan;
+  transition: all 0.5s;
+}
+
+#grow-border:hover:before,
+#grow-border:hover:after {
+  height: 100%;
+  width: 100%;
+}
+
+#first-letter {
+  border: 2px solid darkcyan;
+  overflow: visible;
+  transition: all 0.2s;
+}
+
+#first-letter span {
+  color: transparent;
+  position: relative;
+}
+
+#first-letter span:before {
+  content: "F";
+  color: darkcyan;
+  position: absolute;
+  transition: all 0.2s;
+}
+
+#first-letter:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: darkcyan;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.8s;
+}
+
+#first-letter:hover {
+  color: white;
+}
+
+#first-letter:hover span:before {
+  color: white;
+  font-size: 2.6em;
+  transform: translate(-60%, -42%) rotate(360deg);
+}
+
+#first-letter:hover:before {
+  opacity: 1;
+  transform: rotate(10deg);
+}
+
+#four-border:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: darkcyan;
+  transition: all 0.5s;
+}
+
+#four-border:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: darkcyan;
+  transition: all 0.5s;
+}
+
+#four-border span:before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: darkcyan;
+  transition: all 0.5s;
+}
+
+#four-border span:after {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: darkcyan;
+  transition: all 0.5s;
+}
+
+#four-border:hover:before {
+  left: 0;
+}
+
+#four-border:hover:after {
+  right: 0;
+}
+
+#four-border:hover span:before {
+  top: 0;
+}
+
+#four-border:hover span:after {
+  bottom: 0;
+}
+
+#wavy {
+  border: 2px solid darkcyan;
+  transition: all 0.5s;
+}
+
+#wavy span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: calc(100% + 22px);
+  background: darkcyan;
+  transition: all 1s;
+  z-index: -1;
+}
+
+#wavy span:before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  background: url("../src/img/wave.png");
+  animation: wavy 0.5s linear infinite;
+}
+
+#wavy:hover {
+  color: white;
+}
+
+#wavy:hover span {
+  top: 0;
+}
+
+@keyframes wavy {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: 118px;
+  }
+}
+
+#two-cuts {
+  transition: 0.3s;
+}
+
+#two-cuts span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  border: 2px solid darkcyan;
+  z-index: -1;
+}
+
+#two-cuts span:before {
+  content: "";
+  position: absolute;
+  width: 6%;
+  height: 500%;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-65deg);
+  transition: all 0.3s;
+}
+
+#two-cuts:hover {
+  color: white;
+}
+
+#two-cuts:hover span:before {
+  width: 100%;
+  background: darkcyan;
+  transform: translate(-50%, -50%) rotate(65deg);
+}
+
+#two-parts {
+  color: white;
+  overflow: visible;
+}
+
+#two-parts:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: -1%;
+  top: -4px;
+  background: tomato;
+  transform: skewX(30deg);
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#two-parts:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: -1%;
+  bottom: -4px;
+  background: cornflowerblue;
+  transform: skewX(30deg);
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#two-parts:hover:before {
+  transform: skewX(0);
+  left: 50%;
+  top: 0;
+}
+
+#two-parts:hover:after {
+  transform: skewX(0);
+  right: 50%;
+  bottom: 0;
+}
+
+#pulsing {
+  background: darkcyan;
+  color: white;
+  border-radius: 100px;
+  transition: all 0.3s;
+  overflow: visible;
+}
+
+#pulsing:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: darkcyan;
+  border-radius: 100px;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+#pulsing:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#pulsing:hover:before {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+#pulsing:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#diagonal {
+  border: 2px solid darkcyan;
+  transition: all 0.5s;
+}
+
+#diagonal:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-top: 26px solid darkcyan;
+  border-bottom: 26px solid darkcyan;
+  border-right: 26px solid transparent;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
+
+#diagonal:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-top: 26px solid darkcyan;
+  border-bottom: 26px solid darkcyan;
+  border-left: 26px solid transparent;
+  z-index: -1;
+  transform: translateX(100%);
+  transition: all 0.5s;
+}
+
+#diagonal:hover {
+  color: white;
+}
+
+#diagonal:hover:before {
+  transform: translateX(0);
+}
+
+#diagonal:hover:after {
+  transform: translateX(0);
+}
+
+#glitch {
+  overflow: visible;
+  padding: 0;
+}
+
+#glitch span {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: darkcyan;
+  padding: 10px 30px;
+  pointer-events: none;
+}
+
+#glitch:hover span {
+  animation: glitch 3s linear infinite;
+}
+
+@keyframes glitch {
+  0% {
+    transform: rotateX(10deg) skewX(90deg);
+    background-color: #0ffbf9;
+    filter: blur(3px);
+  }
+
+  1% {
+    transform: none;
+    background-color: darkcyan;
+    filter: blur(0);
+  }
+
+  2% {
+    transform: rotateX(10deg) skewX(90deg);
+    background-color: #cc0f39;
+    filter: blur(3px);
+  }
+
+  3% {
+    transform: rotateX(12deg) skewX(79deg);
+    background-color: darkcyan;
+    filter: blur(0);
+  }
+
+  4% {
+    transform: translateX(20px) skewX(11deg);
+    background-color: #0ffbf9;
+    filter: blur(3px);
+  }
+
+  5% {
+    transform: rotateY(10deg) skewY(30deg);
+    background-color: darkcyan;
+    filter: blur(0);
+  }
+
+  6% {
+    transform: translateX(-50px) skewX(40deg);
+    background-color: #cc0f39;
+    filter: blur(3px);
+  }
+
+  7% {
+    transform: rotateX(7deg) skewX(81deg);
+    background-color: darkcyan;
+    filter: blur(0);
+  }
+
+  8% {
+    transform: none;
+    filter: none;
+    background-color: darkcyan;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

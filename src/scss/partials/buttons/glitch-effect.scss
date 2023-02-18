@@ -1,0 +1,63 @@
+#glitch {
+    overflow: visible;
+    padding: 0;
+    span {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: darkcyan;
+        padding: 10px 30px;
+        pointer-events: none;
+    }
+    &:hover span {
+        animation: glitch 3s linear infinite;
+    }
+    @keyframes glitch {
+        0% {
+            transform: rotateX(10deg) skewX(90deg);
+            background-color: #0ffbf9;
+            filter: blur(3px);
+        }
+        1% {
+            transform: none;
+            background-color: darkcyan;
+            filter: blur(0);
+        }
+        2% {
+            transform: rotateX(10deg) skewX(90deg);
+            background-color: #cc0f39;
+            filter: blur(3px);
+        }
+        3% {
+            transform: rotateX(12deg) skewX(79deg);
+            background-color: darkcyan;
+            filter: blur(0);
+        }
+        4% {
+            transform: translateX(20px) skewX(11deg);
+            background-color: #0ffbf9;
+            filter: blur(3px);
+        }
+        5% {
+            transform: rotateY(10deg) skewY(30deg);
+            background-color: darkcyan;
+            filter: blur(0);
+        }
+        6% {
+            transform: translateX(-50px) skewX(40deg);
+            background-color: #cc0f39;
+            filter: blur(3px);
+        }
+        7% {
+            transform: rotateX(7deg) skewX(81deg);
+            background-color: darkcyan;
+            filter: blur(0);
+        }
+        8% {
+            transform: none;
+            filter: none;
+            background-color: darkcyan;
+        }
+    }
+}

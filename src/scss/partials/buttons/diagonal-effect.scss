@@ -1,0 +1,43 @@
+#diagonal {
+    border: 2px solid darkcyan;
+    transition: all 0.5s;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-top: 26px solid darkcyan;
+        border-bottom: 26px solid darkcyan;
+        border-right: 26px solid transparent;
+        z-index: -1;
+        transform: translateX(-100%);
+        transition: all 0.5s;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-top: 26px solid darkcyan;
+        border-bottom: 26px solid darkcyan;
+        border-left: 26px solid transparent;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 0.5s;
+    }
+    &:hover {
+        color: white;
+        &:before {
+            transform: translateX(0);
+        }
+        &:after {
+            transform: translateX(0);
+        }
+    }
+    &:active {
+    }
+}

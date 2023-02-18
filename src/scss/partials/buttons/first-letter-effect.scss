@@ -1,0 +1,39 @@
+#first-letter {
+    border: 2px solid darkcyan;
+    overflow: visible;
+    transition: all 0.2s;
+    span {
+        color: transparent;
+        position: relative;
+    }
+    span:before {
+        content: 'F';
+        color: darkcyan;
+        position: absolute;
+        transition: all 0.2s;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: darkcyan;
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.8s;
+    }
+    &:hover {
+        color: white;
+        span:before {
+            color: white;
+            font-size: 2.6em;
+            transform: translate(-60%, -42%) rotate(360deg);
+        }
+        &:before {
+            opacity: 1;
+            transform: rotate(10deg);
+        }
+    }
+}

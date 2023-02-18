@@ -1,0 +1,33 @@
+#grow-border {
+    background: darkcyan;
+    color: white;
+    overflow: visible;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: -5px;
+        left: -5px;
+        border-left: 2px solid darkcyan;
+        border-top: 2px solid darkcyan;
+        transition: all 0.5s;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        bottom: -5px;
+        right: -5px;
+        border-right: 2px solid darkcyan;
+        border-bottom: 2px solid darkcyan;
+        transition: all 0.5s;
+    }
+    &:hover {
+        &:before, &:after {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

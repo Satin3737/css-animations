@@ -1,6 +1,6 @@
 #text {
     border: 2px solid darkcyan;
-    transition: color 1s;
+    transition: color 0.5s;
     &:before {
         content: 'cool';
         display: flex;
@@ -13,7 +13,7 @@
         height: 100%;
         background: darkcyan;
         transform: translateY(-100%);
-        transition: transform 1s;
+        transition: transform 0.5s;
     }
     &:hover {
         color: #fff;
