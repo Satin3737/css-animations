@@ -1590,6 +1590,76 @@ h1 {
   transform: translateX(0);
 }
 
+.images__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+}
+
+.images .container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.images img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.images .subtitle {
+  font-size: 32px;
+  color: inherit;
+  text-transform: lowercase;
+  margin-bottom: 16px;
+}
+
+.images .text {
+  color: inherit;
+  text-transform: lowercase;
+  font-size: 20px;
+}
+
+#images-effect-1 .descr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.5s;
+}
+
+#images-effect-1 img {
+  transition: all 0.5s;
+}
+
+#images-effect-1:hover img {
+  transform: scale(1.3) rotate(15deg);
+}
+
+#images-effect-1:hover .descr {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cards__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
