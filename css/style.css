@@ -1602,6 +1602,7 @@ h1 {
   height: 500px;
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .images img {
@@ -1636,7 +1637,7 @@ h1 {
   flex-direction: column;
   color: white;
   opacity: 0;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 139, 139, 0);
   transition: all 0.5s;
 }
 
@@ -1650,7 +1651,279 @@ h1 {
 
 #images-effect-1:hover .descr {
   opacity: 1;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 139, 139, 0.5);
+}
+
+#images-effect-2 .descr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  background: rgba(0, 139, 139, 0);
+  transition: all 0.5s;
+  transform: translateY(-100%);
+}
+
+#images-effect-2 img {
+  transition: all 0.5s;
+}
+
+#images-effect-2:hover img {
+  transform: scale(1.3) rotate(-15deg);
+}
+
+#images-effect-2:hover .descr {
+  background: rgba(0, 139, 139, 0.5);
+  transform: translateY(0);
+}
+
+#images-effect-3 .descr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  background: darkcyan;
+  transition: all 0.5s;
+  transform: translateX(-100%);
+}
+
+#images-effect-3 img {
+  transition: all 0.5s;
+}
+
+#images-effect-3:hover img {
+  transform: translateX(100%);
+}
+
+#images-effect-3:hover .descr {
+  transform: translateX(0);
+}
+
+#images-effect-4 .descr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  background: darkcyan;
+  transition: all 0.5s;
+  transform: translateY(100%);
+}
+
+#images-effect-4 img {
+  transition: all 0.5s;
+}
+
+#images-effect-4:hover img {
+  transform: translateY(-30%);
+}
+
+#images-effect-4:hover .descr {
+  transform: translateY(0);
+}
+
+#images-effect-5:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 139, 139, 0.5);
+  transform: translateY(100%);
+  transition: all 0.3s 0.3s;
+}
+
+#images-effect-5 .descr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  transition: all 0.3s;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+#images-effect-5:hover:before {
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+#images-effect-5:hover .descr {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+#images-effect-6 img {
+  transition: all 1s;
+}
+
+#images-effect-6:hover img {
+  transform: scale(1.24) rotate(10deg);
+}
+
+#images-effect-7:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: rgba(0, 139, 139, 0.5);
+  transform: translate(100%, 100%) rotate(45deg);
+  transition: all 0.3s;
+}
+
+#images-effect-7 .descr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  color: white;
+  transition: all 0.3s;
+}
+
+#images-effect-7 .subtitle {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  background: darkcyan;
+  transition: all 0.3s;
+  transform: translate(100%, -100%);
+}
+
+#images-effect-7 .text {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s;
+  transform: translate(-100%, 100%);
+}
+
+#images-effect-7 .button {
+  transition: all 0.3s;
+  padding: 10px 40px;
+  margin: 0 auto 50px;
+  transform: translateY(400%);
+}
+
+#images-effect-7:hover .subtitle {
+  transform: translate(0, 0);
+  transition-delay: 0.3s;
+}
+
+#images-effect-7:hover .text {
+  transform: translate(0, 0);
+  transition-delay: 0.5s;
+}
+
+#images-effect-7:hover .button {
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
+#images-effect-7:hover:before {
+  transform: translate(-20%, -20%) rotate(45deg);
+}
+
+#images-effect-8:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: rgba(0, 139, 139, 0.5);
+  transform: translate(100%, 100%) rotate(45deg);
+  transition: all 0.3s;
+}
+
+#images-effect-8 .descr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  color: white;
+  transition: all 0.3s;
+}
+
+#images-effect-8 .subtitle {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  background: darkcyan;
+  transition: all 0.3s;
+  transform: translate(100%, -100%);
+}
+
+#images-effect-8 .text {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s;
+  transform: translate(-100%, 100%);
+}
+
+#images-effect-8 .button {
+  transition: all 0.3s;
+  padding: 10px 40px;
+  margin: 0 auto 50px;
+  transform: translateY(400%);
+}
+
+#images-effect-8:hover .subtitle {
+  transform: translate(0, 0);
+  transition-delay: 0.3s;
+}
+
+#images-effect-8:hover .text {
+  transform: translate(0, 0);
+  transition-delay: 0.5s;
+}
+
+#images-effect-8:hover .button {
+  transform: translateY(0);
+  transition-delay: 0.7s;
+}
+
+#images-effect-8:hover:before {
+  transform: translate(-20%, -20%) rotate(45deg);
 }
 
 .cards__wrapper {
