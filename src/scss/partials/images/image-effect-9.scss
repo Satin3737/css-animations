@@ -1,4 +1,5 @@
-#images-effect-8 {
+#images-effect-9 {
+    transition: all 0.5s;
     &:before {
         content: '';
         position: absolute;
@@ -6,9 +7,13 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 139, 139, 0.5);
-        transition: all 0.3s;
-        transform: translate(140%, -20%) rotate(180deg);
+        background: darkcyan;
+        transition: all 0.5s;
+        transform: scale(0) rotate(-180deg);
+    }
+    img {
+        transition: all 0.5s;
+        transition-delay: 0.5s;
     }
     .descr {
         position: absolute;
@@ -28,38 +33,42 @@
         margin-top: 50px;
         text-align: center;
         padding: 20px;
-        background: darkcyan;
-        transition: all 0.3s;
-        transform: translateY(-200%);
+        transition: all 0.5s;
+        opacity: 0;
     }
     .text {
         padding: 20px;
         width: 100%;
         text-align: center;
         transition: all 0.3s;
-        transform: translateX(120%) rotate(90deg);
+        opacity: 0;
     }
     .button {
         transition: all 0.3s;
         padding: 10px 40px;
         margin: 0 auto 50px;
-        transform: translateY(-500px);
+        opacity: 0;
     }
     &:hover {
+        img {
+            transform: scale(0);
+            transition-delay: 0s;
+        }
         .subtitle {
-            transform: translateY(0);
-            transition-delay: 0.5s;
+            opacity: 1;
+            transition-delay: 1s;
         }
         .text {
-            transform: translateX(0) rotate(0);
-            transition-delay: 0.3s;
+            opacity: 1;
+            transition-delay: 1s;
         }
         .button {
-            transform: translateY(0);
-            transition-delay: 0.4s;
+            opacity: 1;
+            transition-delay: 1s;
         }
         &:before {
-            transform: translate(0, 0) rotate(0);
+            transform: scale(1) rotate(0);
+            transition-delay: 0.5s;
         }
     }
 }
