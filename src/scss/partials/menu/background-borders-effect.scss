@@ -1,0 +1,48 @@
+#background-borders {
+    ul {
+        display: flex;
+        column-gap: 12px;
+    }
+    a {
+        display: block;
+        padding: 4px 16px;
+        position: relative;
+        transition: all 0.5s;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transform: scaleY(2);
+            opacity: 0;
+            transition: all 0.5s;
+            border-top: 2px solid darkcyan;
+            border-bottom: 2px solid darkcyan;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: darkcyan;
+            z-index: -1;
+            transition: all 0.5s;
+            transform: scale(0);
+        }
+        &:hover {
+            color: white;
+            &:before {
+                transform: scaleY(1.2);
+                opacity: 1;
+            }
+            &:after {
+                transform: scale(1);
+            }
+        }
+    }
+}

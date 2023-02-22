@@ -1,0 +1,46 @@
+#color-layers {
+    ul {
+        display: flex;
+        row-gap: 12px;
+        flex-direction: column;
+    }
+    a {
+        display: block;
+        position: relative;
+        color: transparent;
+        -webkit-text-stroke: 1px darkcyan;
+        font-size: 48px;
+        font-weight: 700;
+        transition: all 0.5s;
+        &:before {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: 0.5s;
+        }
+        &:after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: 0.5s;
+        }
+        &:hover {
+            color: darkcyan;
+            -webkit-text-stroke: 1px darkblue;
+            &:before {
+                color: tomato;
+                z-index: 1;
+                -webkit-text-stroke: 1px darkblue;
+                transform: translate(4px, -4px);
+            }
+            &:after {
+                color: cornflowerblue;
+                z-index: 2;
+                -webkit-text-stroke: 1px darkblue;
+                transform: translate(8px, -8px);
+            }
+        }
+    }
+}

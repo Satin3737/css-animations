@@ -1,0 +1,49 @@
+#border-rotation {
+    ul {
+        display: flex;
+        column-gap: 12px;
+    }
+    a {
+        display: block;
+        padding: 4px 16px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-top: 2px solid darkcyan;
+            border-left: 2px solid darkcyan;
+            transition: all 0.3s;
+            transform-origin: left;
+            pointer-events: none;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border-bottom: 2px solid darkcyan;
+            border-right: 2px solid darkcyan;
+            transition: all 0.3s;
+            transform-origin: right;
+            pointer-events: none;
+        }
+        &:hover {
+            &:before {
+                width: 15px;
+                height: 15px;
+                transform: rotate(360deg);
+            }
+            &:after {
+                width: 15px;
+                height: 15px;
+                transform: rotate(360deg);
+            }
+        }
+    }
+}

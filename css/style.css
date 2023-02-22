@@ -2467,6 +2467,260 @@ h1 {
   transition-delay: 0.3s;
 }
 
+#background-borders ul {
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+
+#background-borders a {
+  display: block;
+  padding: 4px 16px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+#background-borders a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: scaleY(2);
+  opacity: 0;
+  transition: all 0.5s;
+  border-top: 2px solid darkcyan;
+  border-bottom: 2px solid darkcyan;
+}
+
+#background-borders a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: darkcyan;
+  z-index: -1;
+  transition: all 0.5s;
+  transform: scale(0);
+}
+
+#background-borders a:hover {
+  color: white;
+}
+
+#background-borders a:hover:before {
+  transform: scaleY(1.2);
+  opacity: 1;
+}
+
+#background-borders a:hover:after {
+  transform: scale(1);
+}
+
+#sniper-borders ul {
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+
+#sniper-borders a {
+  display: block;
+  padding: 4px 16px;
+  position: relative;
+  transition: all 0.3s;
+}
+
+#sniper-borders a span:first-child:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid tomato;
+  border-left: 2px solid tomato;
+  background: none;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+#sniper-borders a span:first-child:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid tomato;
+  border-right: 2px solid tomato;
+  background: none;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+#sniper-borders a span:last-child:before {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid tomato;
+  border-left: 2px solid tomato;
+  background: none;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+#sniper-borders a span:last-child:after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  border-bottom: 2px solid tomato;
+  border-right: 2px solid tomato;
+  background: none;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+#sniper-borders a:hover {
+  color: tomato;
+}
+
+#sniper-borders a:hover span:first-child:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+
+#sniper-borders a:hover span:first-child:after {
+  top: 0;
+  right: 0;
+  opacity: 1;
+}
+
+#sniper-borders a:hover span:last-child:before {
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+}
+
+#sniper-borders a:hover span:last-child:after {
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+}
+
+#border-rotation ul {
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+
+#border-rotation a {
+  display: block;
+  padding: 4px 16px;
+  position: relative;
+}
+
+#border-rotation a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid darkcyan;
+  border-left: 2px solid darkcyan;
+  transition: all 0.3s;
+  transform-origin: left;
+  pointer-events: none;
+}
+
+#border-rotation a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid darkcyan;
+  border-right: 2px solid darkcyan;
+  transition: all 0.3s;
+  transform-origin: right;
+  pointer-events: none;
+}
+
+#border-rotation a:hover:before {
+  width: 15px;
+  height: 15px;
+  transform: rotate(360deg);
+}
+
+#border-rotation a:hover:after {
+  width: 15px;
+  height: 15px;
+  transform: rotate(360deg);
+}
+
+#color-layers ul {
+  display: flex;
+  row-gap: 12px;
+  flex-direction: column;
+}
+
+#color-layers a {
+  display: block;
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px darkcyan;
+  font-size: 48px;
+  font-weight: 700;
+  transition: all 0.5s;
+}
+
+#color-layers a:before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.5s;
+}
+
+#color-layers a:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.5s;
+}
+
+#color-layers a:hover {
+  color: darkcyan;
+  -webkit-text-stroke: 1px darkblue;
+}
+
+#color-layers a:hover:before {
+  color: tomato;
+  z-index: 1;
+  -webkit-text-stroke: 1px darkblue;
+  transform: translate(4px, -4px);
+}
+
+#color-layers a:hover:after {
+  color: cornflowerblue;
+  z-index: 2;
+  -webkit-text-stroke: 1px darkblue;
+  transform: translate(8px, -8px);
+}
+
 .cards__wrapper {
   display: flex;
   flex-direction: column;

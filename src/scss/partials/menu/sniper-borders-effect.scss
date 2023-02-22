@@ -1,0 +1,95 @@
+#sniper-borders {
+    ul {
+        display: flex;
+        column-gap: 12px;
+    }
+    a {
+        display: block;
+        padding: 4px 16px;
+        position: relative;
+        transition: all 0.3s;
+        span:first-child {
+            &:before {
+                content: '';
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 8px;
+                height: 8px;
+                border-top: 2px solid tomato;
+                border-left: 2px solid tomato;
+                background: none;
+                opacity: 0;
+                transition: all 0.3s;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 6px;
+                right: 6px;
+                width: 8px;
+                height: 8px;
+                border-top: 2px solid tomato;
+                border-right: 2px solid tomato;
+                background: none;
+                opacity: 0;
+                transition: all 0.3s;
+            }
+        }
+        span:last-child {
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 6px;
+                left: 6px;
+                width: 8px;
+                height: 8px;
+                border-bottom: 2px solid tomato;
+                border-left: 2px solid tomato;
+                background: none;
+                opacity: 0;
+                transition: all 0.3s;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 6px;
+                right: 6px;
+                width: 8px;
+                height: 8px;
+                border-bottom: 2px solid tomato;
+                border-right: 2px solid tomato;
+                background: none;
+                opacity: 0;
+                transition: all 0.3s;
+            }
+        }
+        &:hover {
+            color: tomato;
+            span:first-child {
+                &:before {
+                    top: 0;
+                    left: 0;
+                    opacity: 1;
+                }
+                &:after {
+                    top: 0;
+                    right: 0;
+                    opacity: 1;
+                }
+            }
+            span:last-child {
+                &:before {
+                    bottom: 0;
+                    left: 0;
+                    opacity: 1;
+                }
+                &:after {
+                    bottom: 0;
+                    right: 0;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
