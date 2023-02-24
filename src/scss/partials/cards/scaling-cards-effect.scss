@@ -1,0 +1,52 @@
+#scaling-cards {
+    .card {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        background: darkcyan;
+        box-shadow: 0 30px 30px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+        .img {
+            width: 100%;
+            height: 100%;
+            transition: all 0.5s;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .content {
+            position: absolute;
+            bottom: 0;
+            width: 80%;
+            left: 50%;
+            height: 80px;
+            background: white;
+            text-align: center;
+            transition: all 0.5s;
+            overflow: hidden;
+            transform: translateX(-50%);
+            h2 {
+                margin: 16px auto;
+            }
+            p {
+                transition: all 0.5s;
+                opacity: 0;
+            }
+        }
+        &:hover {
+            .img {
+                opacity: 0;
+            }
+            .content {
+                width: 100%;
+                height: 100%;
+                p {
+                    opacity: 1;
+                    transition-delay: 0.5s;
+                }
+            }
+        }
+    }
+}

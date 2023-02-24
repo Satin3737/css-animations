@@ -3,6 +3,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        row-gap: 40px;
+        row-gap: 200px;
     }
 }
+
+@import "background-translate-effect";
+@import "expandable-card-effect";
+@import "png-card-effect";
+@import "border-card-effect";
+@import "double-face-effect";
+@import "layer-cards-effect";
+@import "scaling-cards-effect";

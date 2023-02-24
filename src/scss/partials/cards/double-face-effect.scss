@@ -1,0 +1,52 @@
+#double-face {
+    .card {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        transition: 0.5s;
+        .face {
+            &-one {
+                padding: 20px;
+                text-align: center;
+                background: cornflowerblue;
+                color: white;
+                width: 300px;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: 0.5s;
+                transform: translateY(100px);
+                z-index: 1;
+                img {
+                    max-height: 100px;
+                }
+            }
+            &-two {
+                position: relative;
+                width: 300px;
+                height: 200px;
+                background: darkcyan;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                transition: all 0.5s;
+                transform: translateY(-100px);
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+                z-index: -1;
+            }
+        }
+        &:hover {
+            .face {
+                &-one {
+                    transform: translateY(0);
+                    background: tomato;
+                }
+                &-two {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+#smoky-text {
+    ul {
+        display: flex;
+        li {
+            color: darkcyan;
+            font-size: 120px;
+            transition: all 2s;
+            letter-spacing: 20px;
+            font-weight: 700;
+            &:nth-child(2) {
+                transition-delay: 0.4s;
+            }
+            &:nth-child(3) {
+                transition-delay: 0.8s;
+            }
+            &:nth-child(4) {
+                transition-delay: 1.2s;
+            }
+            &:nth-child(5) {
+                transition-delay: 1.6s;
+            }
+        }
+        &:hover {
+            li {
+                transform: rotate(45deg) translateY(-200px) skewX(-40deg);
+                opacity: 0;
+                filter: blur(20px);
+            }
+        }
+    }
+}
