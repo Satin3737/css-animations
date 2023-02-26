@@ -470,6 +470,87 @@ h1 {
   transition-timing-function: ease-in-out;
 }
 
+.animations-prop__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.animations-prop > div .example {
+  width: 150px;
+  height: 150px;
+  background: darkcyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  animation-name: moveExample;
+  animation-duration: 5s;
+  animation-delay: 3s;
+  margin: 24px;
+}
+
+.animations-prop > div .example_none {
+  animation-fill-mode: none;
+}
+
+.animations-prop > div .example_forwards {
+  animation-fill-mode: forwards;
+}
+
+.animations-prop > div .example_backwards {
+  animation-fill-mode: backwards;
+}
+
+.animations-prop > div .example_both {
+  animation-fill-mode: both;
+}
+
+.animations-prop > div .example_iteration {
+  animation-iteration-count: 3;
+}
+
+.animations-prop > div .example_infinite {
+  animation-iteration-count: infinite;
+}
+
+.animations-prop > div .example_normal {
+  animation-direction: normal;
+}
+
+.animations-prop > div .example_reverse {
+  animation-direction: reverse;
+}
+
+.animations-prop > div .example_alternate {
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.animations-prop > div .example_alternate-reverse {
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes moveExample {
+  0% {
+    transform: translateX(200px);
+  }
+
+  50% {
+    transform: translateX(400px);
+  }
+
+  100% {
+    transform: translateX(400px) rotate(45deg);
+  }
+}
+
 .buttons__wrapper {
   display: flex;
   flex-direction: column;

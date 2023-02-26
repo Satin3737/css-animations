@@ -1,0 +1,71 @@
+.animations-prop {
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    & > div {
+        .example {
+            width: 150px;
+            height: 150px;
+            background: darkcyan;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            animation-name: moveExample;
+            animation-duration: 5s;
+            animation-delay: 3s;
+            margin: 24px;
+            &_none {
+                animation-fill-mode: none;
+            }
+            &_forwards {
+                animation-fill-mode: forwards;
+            }
+            &_backwards {
+                animation-fill-mode: backwards;
+            }
+            &_both {
+                animation-fill-mode: both;
+            }
+            &_iteration {
+                animation-iteration-count: 3;
+            }
+            &_infinite {
+                animation-iteration-count: infinite;
+            }
+            &_normal {
+                animation-direction: normal;
+            }
+            &_reverse {
+                animation-direction: reverse;
+            }
+            &_alternate {
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-fill-mode: both;
+            }
+            &_alternate-reverse {
+                animation-direction: alternate-reverse;
+                animation-iteration-count: infinite;
+                animation-fill-mode: both;
+            }
+        }
+        @keyframes moveExample {
+            0% {
+                transform: translateX(200px);
+            }
+            50% {
+                transform: translateX(400px);
+            }
+            100% {
+                transform: translateX(400px) rotate(45deg);
+            }
+        }
+    }
+
+}
