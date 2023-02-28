@@ -1,0 +1,32 @@
+#text-floating {
+    background: darkcyan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    h2 {
+        font-weight: 700;
+        font-size: 120px;
+        text-align: center;
+        color: white;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1;
+        letter-spacing: 10px;
+        text-shadow:
+            0 1px 0 darkcyan,
+            0 2px 0 darkcyan,
+            0 3px 0 darkcyan,
+            0 4px 0 darkcyan,
+            0 30px 5px rgba(0, 0, 0, 0.1);
+        animation: floatText 3s linear infinite alternate;
+    }
+    @keyframes floatText {
+        0% {
+            transform: rotate(5deg);
+        }
+        100% {
+            transform: rotate(-5deg);
+        }
+    }
+}

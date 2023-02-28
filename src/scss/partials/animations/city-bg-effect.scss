@@ -1,0 +1,30 @@
+#city-bg {
+    .background {
+        height: 60vh;
+        background: url("../src/img/city-bg.jpg");
+        background-position: bottom left;
+        animation: city 15s linear infinite;
+        position: relative;
+    }
+    .car {
+        position: absolute;
+        left: 300px;
+        bottom: -50px;
+        width: 200px;
+    }
+    .bike {
+        position: absolute;
+        left: 700px;
+        bottom: 55px;
+        width: 150px;
+    }
+
+    @keyframes city {
+        0% {
+            background-position: bottom left;
+        }
+        100% {
+            background-position: bottom right;
+        }
+    }
+}

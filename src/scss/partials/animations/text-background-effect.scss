@@ -1,0 +1,21 @@
+#text-background {
+    padding: 100px;
+    background: darkcyan;
+    h2 {
+        font-size: 120px;
+        text-align: center;
+        background: url("../src/img/text-bg.jpg");
+        background-clip: text;
+        color: transparent;
+        animation: textBg 30s linear infinite;
+    }
+
+    @keyframes textBg {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 100% 100%;
+        }
+    }
+}

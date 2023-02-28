@@ -1,0 +1,28 @@
+#rotating-text {
+    padding: 100px;
+    background: darkcyan;
+    h2 {
+        font-size: 48px;
+        color: white;
+        text-align: center;
+        span {
+            &:before {
+                content: attr(data-text-1);
+                color: tomato;
+                animation: textSwitch 5s infinite;
+            }
+        }
+    }
+    
+    @keyframes textSwitch {
+        0% {
+            content: attr(data-text-1);
+        }
+        50% {
+            content: attr(data-text-2);
+        }
+        100% {
+            content: attr(data-text-3);
+        }
+    }
+}

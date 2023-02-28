@@ -5,7 +5,18 @@
         flex-direction: column;
         row-gap: 20px;
     }
-    &_example {
-        min-height: 100vh;
-    }
 }
+
+@import "text-floating-effect";
+@import "rotating-loading-effect";
+@import "city-bg-effect";
+@import "rotating-text-effect";
+@import "background-pattern-effect";
+@import "lightning-text-effect";
+@import "heartbeat-effect";
+@import "text-background-effect";
+@import "bouncing-loading-effect";
+@import "icons-hover-effect";
+@import "text-loading-effect";
+@import "pulse-effect";
+@import "newton-cradle-effect";

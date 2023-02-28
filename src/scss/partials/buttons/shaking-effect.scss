@@ -1,0 +1,27 @@
+#shaking {
+    border: 2px solid darkcyan;
+    transition: all 0.3s;
+    &:hover {
+        color: tomato;
+        border-color: tomato;
+        animation: shake 0.3s linear 1;
+    }
+
+    @keyframes shake {
+        0% {
+            transform: rotate(0);
+        }
+        25% {
+            transform: rotate(10deg);
+        }
+        50% {
+            transform: rotate(-10deg);
+        }
+        75% {
+            transform: rotate(10deg);
+        }
+        100% {
+            transform: rotate(0);
+        }
+    }
+}
